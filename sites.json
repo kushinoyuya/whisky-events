@@ -1,0 +1,78 @@
+{
+  "_comment": "Crawl targets. robots.txt is checked automatically; check each site's terms of use yourself before enabling. 'follow' is a regexp over absolute URLs: matching same-host links on the page are crawled as detail pages (up to max_links).",
+  "sites": [
+    {
+      "name": "PR TIMES: ウイスキーフェスティバル東京 2026",
+      "url": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
+      "kind": "press release",
+      "enabled": true
+    },
+    {
+      "name": "PR TIMES: ウイスキーフェスティバル主催者のリリース一覧",
+      "url": "https://prtimes.jp/main/html/searchrlp/company_id/119996",
+      "kind": "press-release list",
+      "enabled": false,
+      "follow": "^https://prtimes\\.jp/main/html/rd/p/\\d+\\.000119996\\.html$",
+      "max_links": 10,
+      "note": "一覧がJSで描画される場合はリンクが取れない。実行して '0 link(s)' なら別の一覧URLを探す"
+    },
+    {
+      "name": "Fukuoka Now: Whisky Talk Fukuoka",
+      "url": "https://www.fukuoka-now.com/en/?p=177645",
+      "kind": "event detail (en)",
+      "enabled": true
+    },
+    {
+      "name": "Fukuoka Now: Japanese Whisky Stories",
+      "url": "https://www.fukuoka-now.com/en/?p=176522",
+      "kind": "event detail (en)",
+      "enabled": true
+    },
+    {
+      "name": "Metropolis Japan: 秩父ウイスキー祭",
+      "url": "https://metropolisjapan.com/events/chichibu-whisky-festival/",
+      "kind": "event detail (en)",
+      "enabled": true
+    },
+    {
+      "name": "Japan Travel: Whisky & Spirits Festival in Yokohama",
+      "url": "https://en.japantravel.com/kanagawa/whisky-and-spirits-festival-in-yokohama/70478",
+      "kind": "event detail (en)",
+      "enabled": true,
+      "note": "検索で見つかったのは他言語版。en サブドメインは未確認"
+    },
+    {
+      "name": "Japan Travel: 秩父ウイスキー祭",
+      "url": "https://en.japantravel.com/saitama/chichibu-whisky-festival/70479",
+      "kind": "event detail (en)",
+      "enabled": true,
+      "note": "en サブドメインは未確認"
+    },
+    {
+      "name": "ベストカレンダー: ジャパニーズクラフトウイスキーフェスタ",
+      "url": "https://bestcalendar.jp/press/90298",
+      "kind": "press release",
+      "enabled": true
+    },
+    {
+      "name": "大阪観光局: 島本町ウイスキー100周年フェス",
+      "url": "https://osaka-info.jp/en/special/dc/event/wisky100fes/",
+      "kind": "event detail (en)",
+      "enabled": true,
+      "note": "2026-10-02〜04 開催済み。終了済み除外の動作確認用"
+    },
+    {
+      "name": "ウォーカープラス: ウイスキートーク福岡",
+      "url": "https://summer.walkerplus.com/odekake/detail_e/ar1040e596278/",
+      "kind": "event detail",
+      "enabled": true
+    },
+    {
+      "name": "イープラス: ウイスキー検索",
+      "url": "https://eplus.jp/sf/word/0000058608",
+      "kind": "ticket listing",
+      "enabled": false,
+      "note": "チケット販売サイト。利用規約でクロールが許されるか確認してから有効化"
+    }
+  ]
+}
